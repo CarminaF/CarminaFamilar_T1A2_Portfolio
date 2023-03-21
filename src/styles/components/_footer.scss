@@ -1,0 +1,14 @@
+footer {
+    .social-media-logos {
+        i {
+            width: 30px;
+        }
+    }
+    nav {
+        font-family: $plain-font;
+    }
+    .contact-details {
+        display: inline;
+        font-family: $plain-font;
+    }
+}

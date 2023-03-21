@@ -5,33 +5,56 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Carmina Familar - Software Developer</title>
-    <link rel="stylesheet" href="./styles/index.css">
+    <link rel="stylesheet" href="./styles/pages/home.css">
+
+    <!-- Font Awesome -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+        integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer"
+    />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito&family=Pacifico&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
         <div class="logo">
             <a href="./index.html">
-                <p class="logo-text">Carmina Familar</p>
+                Carmina Familar
             </a>
         </div>
-        <nav class="nav-items">
-            <a href="">About</a>
-            <a href="">Portfolio</a>
-            <a href="">Blog</a>
-            <a href="">Contact</a>
+
+        <nav class="nav-bar">
+            <button class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <a href="">ABOUT</a>
+            <a href="">PORTFOLIO</a>
+            <a href="">BLOG</a>
+            <a href="">CONTACT</a>
         </nav>
     </header>
     <main>
         <article class="home-article">  
             <section class="home-section-heading">
+                <figure>
+                    <img id="profile-picture" src="./images/profile-pic.jpg" alt="Profile Picture">
+                </figure>
                 <h1>Carmina Familar</h1>
                 <h2>SOFTWARE DEVELOPER</h2>
             </section>
             <section class="home-section-body">
                 <p>Carmina Familar is multilingual software developer with industry experience in C# and the .NET framework and proven proficiency in C/C++ and full-stack web development. </p>
                 <section class="button-items">
-                    <button class="button">View Portfolio</button>
-                    <button class="button">Download Resume</button>
+                    <a href="./pages/portfolio.html"><button class="button">View Portfolio</button></a>
+                    <a href=""><button class="button">Download Resume</button></a>
                 </section>
             </section>
         </article>
@@ -48,17 +71,62 @@
                 <h3>Wireframe model</h3>
             </section>
             <section class="portfolio-items">
-                    <img
-                        class="portfolio-image"
-                        src="./images/Wireframe.png"
-                        alt="Wireframe model"
-                    />
-                    <h3>Wireframe model</h3>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quaerat omnis veritatis, libero sunt illum eveniet recusandae quas officiis nesciunt, voluptatem odio earum, sint consectetur accusantium harum amet expedita fuga reiciendis.</p>
-
-                </section>
+                <img
+                    class="portfolio-image"
+                    src="./images/wireframe.png"
+                    alt="Replicating the pipe operator in C"
+                />
+                <h3>Replicating the pipe operator in C</h3>
+            </section>
+            <section class="portfolio-items">
+                <a href="./pages/portfolio.html">
+                    <h3>View portfolio</h3>
+                    <i class="fa-solid fa-arrow-right-long"></i>
+                </a>
+            </section>
+        </article>
+        <article class="blog">
+            <section class="blog-heading">
+                <h2>Blog</h2>
+            </section>
+            <section class="blog-items">
+                <img src="./images/computer.jpg" alt="How I got my first programming job without an IT degree"/>
+                <h3>How I got my first programming job without an IT degree</h3>
+            </section>
+            <section class="blog-items"></section>
+                <img src="./images/classroom.jpg" alt=""/>
+                <h3>Transitioning from teaching to software development</h3>
+            <section class="blog-items"></section>
+                <h3>View all blog posts</h3>
+                <i class="fa-solid fa-arrow-right-long"></i>
         </article>
     </main>
-    <footer></footer>
+    <footer>
+        <section class="social-media-logos">
+            <a href="https://github.com/CarminaF">
+                <i class="fab fa-github"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/carmina-familar/">
+                <i class="fa-brands fa-linkedin"></i>
+            </a>
+        </section>
+        <section class="line-separator"></section>
+        <nav class="footer-nav">
+            <a href="">ABOUT</a>
+            <a href="">PORTFOLIO</a>
+            <a href="">BLOG</a>
+            <a href="">CONTACT</a>
+        </nav>
+        <section class="contact-details">
+            <section class="contact-detail-items">
+                <i class="fa-solid fa-envelope"></i>
+                <p>carminafamilar94@gmail.com</p>
+            </section>
+            <section class="contact-detail-items">
+                <i class="fa-solid fa-phone"></i>
+                <p>0402 893 436</p>
+            </section>
+        </section>
+    </footer>
 </body>
 </html>

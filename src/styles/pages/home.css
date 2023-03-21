@@ -1,1 +1,81 @@
-/* No CSS *//*# sourceMappingURL=home.css.map */
+header .logo a {
+  font-family: "Pacifico", cursive;
+  font-size: 22px;
+  color: black;
+  padding: 15px;
+  text-decoration: none;
+}
+header .hamburger {
+  border: 0;
+  background-color: white;
+}
+header .hamburger span {
+  display: block;
+  width: 45px;
+  height: 4px;
+  margin: 5px auto;
+  background-color: black;
+}
+header nav {
+  font-family: "Nunito", sans-serif;
+}
+
+footer .social-media-logos i {
+  width: 30px;
+}
+footer nav {
+  font-family: "Nunito", sans-serif;
+}
+footer .contact-details {
+  display: inline;
+  font-family: "Nunito", sans-serif;
+}
+
+#profile-picture {
+  max-width: 70%;
+  border-radius: 50%;
+}
+
+main {
+  font-family: "Nunito", sans-serif;
+}
+main .home-article {
+  padding: 20px;
+}
+main .home-article .home-section-heading h1 {
+  font-family: "Pacifico", cursive;
+  font-weight: 400;
+}
+main .home-article .home-section-body p {
+  font-size: 0.8rem;
+}
+main .home-article .button-items a {
+  display: flex;
+  justify-content: center;
+  text-decoration: none;
+}
+main .home-article .button-items a button {
+  width: 60%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-bottom: 12px;
+  border-radius: 3;
+  border: 0;
+}
+main .home-article .button-items a button:hover {
+  cursor: pointer;
+}
+main .portfolio {
+  display: flex;
+  flex-wrap: wrap;
+}
+main .portfolio .portfolio-heading h2 {
+  font-family: "Pacifico", cursive;
+  font-weight: 400;
+}
+main .portfolio .portfolio-items {
+  width: 90%;
+}
+main .portfolio .portfolio-items img {
+  width: 350px;
+}/*# sourceMappingURL=home.css.map */

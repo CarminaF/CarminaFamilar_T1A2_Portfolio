@@ -1,0 +1,64 @@
+@import "../index.scss";
+
+#profile-picture {
+    max-width: 70%;
+    border-radius: 50%;
+}
+main{
+    font-family: $plain-font;
+    .home-article{
+        padding: 20px;
+        .home-section-heading {
+
+            h1 {
+                font-family: $decorative-font;
+                font-weight: 400;
+                
+            }
+            h2 {
+                
+            }
+        }
+        .home-section-body {
+            p {
+                font-size: 0.8rem;
+            }
+        }
+        .button-items{
+            a {
+                display: flex;
+                justify-content: center;
+                text-decoration: none;
+                button {
+                    width: 60%;
+                    padding-top:10px;
+                    padding-bottom: 10px;
+                    margin-bottom: 12px;
+                    border-radius: 3;
+                    border: 0;
+                    
+                }
+                button:hover {
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+    .portfolio {
+        display: flex;
+        flex-wrap: wrap;
+
+        .portfolio-heading {
+            h2 {
+                font-family: $decorative-font;
+                font-weight: 400;
+            }
+        }
+        .portfolio-items {
+            width: 90%;
+            img {
+                width: 350px;
+            }
+        }
+    }
+}
