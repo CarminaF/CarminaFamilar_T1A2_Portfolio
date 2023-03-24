@@ -1,27 +1,35 @@
 @import "../index.scss";
 
 #profile-picture {
-    max-width: 70%;
+    width: 30vh;
     border-radius: 50%;
+    box-shadow: 0px 10px 23px -13px rgba(0,0,0,0.35);
 }
 main{
     font-family: $plain-font;
-    .home-article{
+    article {
         padding: 20px;
+    }
+    .home-article{
+        text-align: center;
         .home-section-heading {
-
+           
             h1 {
                 font-family: $decorative-font;
-                font-weight: 400;
-                
+                font-weight: 200;
+                font-size: 2em;
+                margin: 0px 0px 0px 0px; 
             }
             h2 {
-                
+                font-weight: 200;
+                font-size: 1.2em;
+                margin: 0px 0px 0px 0px;
             }
         }
         .home-section-body {
             p {
-                font-size: 0.8rem;
+                font-size: 0.8em;
+                padding: 1em;
             }
         }
         .button-items{
@@ -29,36 +37,65 @@ main{
                 display: flex;
                 justify-content: center;
                 text-decoration: none;
-                button {
-                    width: 60%;
-                    padding-top:10px;
-                    padding-bottom: 10px;
-                    margin-bottom: 12px;
-                    border-radius: 3;
-                    border: 0;
-                    
-                }
-                button:hover {
+                margin-bottom: 1em;
+                .home-section-button {
+                    width: 14em;
+                    padding-top: 1.2em;
+                    padding-bottom: 1.2em;
+                    border: 6px double white;
+                    border-radius: 12px;
+                    font-size: 1em;
                     cursor: pointer;
+                    background-color: $light-pink;
                 }
+                
+            }
+            
+        }
+    }
+    .posts {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        .heading {
+            h2 {
+                font-family: $decorative-font;
+                font-weight: 200;
+                display: block;
+            }
+        }
+        .items {
+            background-color: white;
+            flex-shrink: 0;
+            border: 4px double $light-pink;
+            border-radius: 5%;
+            overflow: hidden;
+            width: 20em;
+            height: 15.5em;
+            margin: 0.4em;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            h3 {
+                font-weight: 200;
+                font-size: 0.8em;
+                padding: 0 0.8em 1em 0.8em;
+            }
+            img {
+                height: 12em;
+
+            }
+            a {
+                cursor: pointer;
             }
         }
     }
     .portfolio {
-        display: flex;
-        flex-wrap: wrap;
-
-        .portfolio-heading {
-            h2 {
-                font-family: $decorative-font;
-                font-weight: 400;
-            }
-        }
-        .portfolio-items {
-            width: 90%;
-            img {
-                width: 350px;
-            }
+        background-color: $dark-pink;
+        h2 {
+            color: white;
         }
     }
 }

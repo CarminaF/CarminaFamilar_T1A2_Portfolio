@@ -23,24 +23,31 @@
 </head>
 <body>
     <header>
-        <div class="logo">
+        <section class="logo">
             <a href="./index.html">
                 Carmina Familar
             </a>
-        </div>
+        </section>
+        
+        
 
-        <nav class="nav-bar">
-            <button class="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-            <a href="">ABOUT</a>
-            <a href="">PORTFOLIO</a>
-            <a href="">BLOG</a>
-            <a href="">CONTACT</a>
+        
+        
+        <nav class="navbar">
+            <input type="checkbox" class="toggle-menu"/>
+            <section class="hamburger"></section>
+            <ul class="menu">
+                <li><a href="./pages/about.html">ABOUT</a></li>
+                <li><a href="./pages/portfolio.html">PORTFOLIO</a></li>
+                <li><a href="./pages/blog.html">BLOG</a></li>
+                <li><a href="./pages/contact.html">CONTACT</a></li>
+            </ul>
+            <!-- <label for="check" class="open-menu"></label> -->
         </nav>
+        
     </header>
+    
+    
     <main>
         <article class="home-article">  
             <section class="home-section-heading">
@@ -53,16 +60,16 @@
             <section class="home-section-body">
                 <p>Carmina Familar is multilingual software developer with industry experience in C# and the .NET framework and proven proficiency in C/C++ and full-stack web development. </p>
                 <section class="button-items">
-                    <a href="./pages/portfolio.html"><button class="button">View Portfolio</button></a>
-                    <a href=""><button class="button">Download Resume</button></a>
+                    <a href="./pages/portfolio.html"><button class="home-section-button">View Portfolio</button></a>
+                    <a href=""><button class="home-section-button">Download Resume</button></a>
                 </section>
             </section>
         </article>
-        <article class="portfolio">
-            <section class="portfolio-heading">
+        <article class="portfolio posts">
+            <section class="portfolio heading">
                 <h2>Portfolio</h2>
             </section>
-            <section class="portfolio-items">
+            <section class="portfolio items">
                 <img
                     class="portfolio-image"
                     src="./images/Wireframe.png"
@@ -70,7 +77,7 @@
                 />
                 <h3>Wireframe model</h3>
             </section>
-            <section class="portfolio-items">
+            <section class="portfolio items">
                 <img
                     class="portfolio-image"
                     src="./images/wireframe.png"
@@ -78,45 +85,52 @@
                 />
                 <h3>Replicating the pipe operator in C</h3>
             </section>
-            <section class="portfolio-items">
+            <section class="portfolio items">
                 <a href="./pages/portfolio.html">
                     <h3>View portfolio</h3>
                     <i class="fa-solid fa-arrow-right-long"></i>
                 </a>
             </section>
         </article>
-        <article class="blog">
-            <section class="blog-heading">
+        <article class="blog posts">
+            <section class="blog heading">
                 <h2>Blog</h2>
             </section>
-            <section class="blog-items">
+            <section class="blog items">
                 <img src="./images/computer.jpg" alt="How I got my first programming job without an IT degree"/>
                 <h3>How I got my first programming job without an IT degree</h3>
             </section>
-            <section class="blog-items"></section>
+            <section class="blog items">
                 <img src="./images/classroom.jpg" alt=""/>
                 <h3>Transitioning from teaching to software development</h3>
-            <section class="blog-items"></section>
-                <h3>View all blog posts</h3>
-                <i class="fa-solid fa-arrow-right-long"></i>
+            </section>
+            <section class="blog items">
+                <a href="./pages/blog.html">
+                    <h3>View all blog posts</h3>
+                    <i class="fa-solid fa-arrow-right-long"></i>
+                </a>
+            </section>
         </article>
     </main>
     <footer>
         <section class="social-media-logos">
             <a href="https://github.com/CarminaF">
-                <i class="fab fa-github"></i>
+                <i class="fab fa-github fa-3x" alt="Github Link"></i>
             </a>
             <a href="https://www.linkedin.com/in/carmina-familar/">
-                <i class="fa-brands fa-linkedin"></i>
+                <i class="fa-brands fa-linkedin fa-3x" alt="LinkedIn Link"></i>
             </a>
         </section>
         <section class="line-separator"></section>
         <nav class="footer-nav">
-            <a href="">ABOUT</a>
-            <a href="">PORTFOLIO</a>
-            <a href="">BLOG</a>
-            <a href="">CONTACT</a>
+            <ul>
+                <li><a href="./pages/about.html">ABOUT</a></li>
+                <li><a href="./pages/portfolio.html">PORTFOLIO</a></li>
+                <li><a href="./pages/blog.html">BLOG</a></li>
+                <li><a href="./pages/contact.html">CONTACT</a></li>
+            </ul>
         </nav>
+        <section class="margin-desktop"></section>
         <section class="contact-details">
             <section class="contact-detail-items">
                 <i class="fa-solid fa-envelope"></i>
