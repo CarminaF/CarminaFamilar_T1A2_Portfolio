@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Carmina Familar - Software Developer</title>
+    <title>Carmina Familar - Software Developer - Home</title>
     <link rel="stylesheet" href="./styles/pages/home.css">
 
     <!-- Font Awesome -->
@@ -28,11 +28,6 @@
                 Carmina Familar
             </a>
         </section>
-        
-        
-
-        
-        
         <nav class="navbar">
             <input type="checkbox" class="toggle-menu"/>
             <section class="hamburger"></section>
@@ -42,73 +37,82 @@
                 <li><a href="./pages/blog.html">BLOG</a></li>
                 <li><a href="./pages/contact.html">CONTACT</a></li>
             </ul>
-            <!-- <label for="check" class="open-menu"></label> -->
         </nav>
-        
     </header>
-    
-    
+
     <main>
-        <article class="home-article">  
-            <section class="home-section-heading">
-                <figure>
-                    <img id="profile-picture" src="./images/profile-pic.jpg" alt="Profile Picture">
-                </figure>
+        <section class="home-section">
+            <figure>
+                <img id="profile-picture" src="./images/profile-pic.jpg" alt="Profile Picture">
+            </figure>
+            <section class="home-body">
                 <h1>Carmina Familar</h1>
                 <h2>SOFTWARE DEVELOPER</h2>
-            </section>
-            <section class="home-section-body">
                 <p>Carmina Familar is multilingual software developer with industry experience in C# and the .NET framework and proven proficiency in C/C++ and full-stack web development. </p>
                 <section class="button-items">
                     <a href="./pages/portfolio.html"><button class="home-section-button">View Portfolio</button></a>
-                    <a href=""><button class="home-section-button">Download Resume</button></a>
+                    <a href="./files/Carmina's Resume.pdf" download=><button class="home-section-button">Download Resume</button></a>
                 </section>
             </section>
-        </article>
+        </section>
+        <section class="portfolio heading">
+            <h2>Portfolio</h2>
+        </section>
         <article class="portfolio posts">
-            <section class="portfolio heading">
-                <h2>Portfolio</h2>
-            </section>
-            <section class="portfolio items">
-                <img
-                    class="portfolio-image"
-                    src="./images/Wireframe.png"
-                    alt="Wireframe model"
-                />
-                <h3>Wireframe model</h3>
-            </section>
-            <section class="portfolio items">
-                <img
-                    class="portfolio-image"
-                    src="./images/wireframe.png"
-                    alt="Replicating the pipe operator in C"
-                />
-                <h3>Replicating the pipe operator in C</h3>
-            </section>
-            <section class="portfolio items">
-                <a href="./pages/portfolio.html">
+            <a href="./pages/portfolio/wireframing-project-in-c.html">
+                <section class="portfolio items">
+                    <img
+                        class="portfolio-image"
+                        src="./images/Wireframe.png"
+                        alt="Wireframe model"
+                    />
+                    <h3>Wireframe model</h3>
+                </section>
+            </a>
+            <a href="./pages/portfolio/replicating-the-pipe-operator-in-c.html">
+                <section class="portfolio items">
+                    <img
+                        class="portfolio-image"
+                        src="./images/pipe.jpg"
+                        alt="Replicating the pipe operator in C"
+                    />
+                    <h3>Replicating the pipe operator in C</h3>
+                </section>
+            </a>
+            <a href="./pages/portfolio.html">
+                <section class="portfolio items">
                     <h3>View portfolio</h3>
-                    <i class="fa-solid fa-arrow-right-long"></i>
-                </a>
+                    <p>&#10230</p>
+                </section>
+            </a>
+            <section class="portfolio empty-child">
+                <p></p>
             </section>
         </article>
+        <section class="blog heading">
+            <h2>Blog</h2>
+        </section>
         <article class="blog posts">
-            <section class="blog heading">
-                <h2>Blog</h2>
-            </section>
-            <section class="blog items">
-                <img src="./images/computer.jpg" alt="How I got my first programming job without an IT degree"/>
-                <h3>How I got my first programming job without an IT degree</h3>
-            </section>
-            <section class="blog items">
-                <img src="./images/classroom.jpg" alt=""/>
-                <h3>Transitioning from teaching to software development</h3>
-            </section>
-            <section class="blog items">
-                <a href="./pages/blog.html">
+            <a href="./pages/blog/how-i-got-my-first-programming-job.html">
+                <section class="blog items">
+                    <img src="./images/computer.jpg" alt="How I got my first programming job without an IT degree"/>
+                    <h3>How I got my first programming job without an IT degree</h3>
+                </section>
+            </a>
+            <a href="./pages/blog/transitioning-from-teaching-to-software-development.html">
+                <section class="blog items">
+                    <img src="./images/classroom.jpg" alt=""/>
+                    <h3>Transitioning from teaching to software development</h3>
+                </section>
+            </a>
+            <a href="./pages/blog.html">
+                <section class="blog items">
                     <h3>View all blog posts</h3>
-                    <i class="fa-solid fa-arrow-right-long"></i>
-                </a>
+                    <p>&#10230</p>
+                </section>
+            </a>
+            <section class="blog empty-child">
+                <p></p>
             </section>
         </article>
     </main>

@@ -1,94 +1,114 @@
 @import "../index.scss";
 
-#profile-picture {
-    width: 30vh;
-    border-radius: 50%;
-    box-shadow: 0px 10px 23px -13px rgba(0,0,0,0.35);
-}
+
 main{
     font-family: $plain-font;
     article {
         padding: 20px;
     }
-    .home-article{
+    .home-section{
+        padding: 110px 32px 10px 32px;
         text-align: center;
-        .home-section-heading {
-           
+        figure {
+            display: flex;
+            justify-content: center;
+            padding: 20px;
+            #profile-picture {
+                width: 240px;
+                height: 240px;
+                border-radius: 50%;
+                box-shadow: 0 10px 23px -13px rgba(0,0,0,0.35);
+            }
+        }
+        .home-body {
             h1 {
                 font-family: $decorative-font;
-                font-weight: 200;
+                font-weight: lighter;
                 font-size: 2em;
-                margin: 0px 0px 0px 0px; 
+                margin: 0 0 0 0; 
             }
             h2 {
                 font-weight: 200;
                 font-size: 1.2em;
-                margin: 0px 0px 0px 0px;
+                margin: 0 0 0 0;
             }
-        }
-        .home-section-body {
             p {
                 font-size: 0.8em;
                 padding: 1em;
             }
-        }
-        .button-items{
-            a {
+            .button-items{
                 display: flex;
-                justify-content: center;
-                text-decoration: none;
-                margin-bottom: 1em;
-                .home-section-button {
-                    width: 14em;
-                    padding-top: 1.2em;
-                    padding-bottom: 1.2em;
-                    border: 6px double white;
-                    border-radius: 12px;
-                    font-size: 1em;
-                    cursor: pointer;
-                    background-color: $light-pink;
+                flex-direction: column;
+                align-items: center;
+                a {
+                    text-decoration: none;
+                    margin-bottom: 1em;
+                    .home-section-button {
+                        width: 14em;
+                        padding: 1.2em;
+                        border: 6px double white;
+                        border-radius: 12px;
+                        font-size: 1em;
+                        cursor: pointer;
+                        background-color: $light-pink;
+                        &:hover {
+                            transition: 0.3s;
+                            background-color: $dark-pink;
+                            color: white;
+                        }
+                    }
+                    
                 }
                 
             }
-            
+        }
+    }
+    .heading {
+        text-align: center;
+        padding-top: 20px;
+        h2 {
+            font-family: $decorative-font;
+            font-weight: lighter;
         }
     }
     .posts {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
-        .heading {
-            h2 {
-                font-family: $decorative-font;
-                font-weight: 200;
-                display: block;
-            }
-        }
-        .items {
-            background-color: white;
-            flex-shrink: 0;
-            border: 4px double $light-pink;
-            border-radius: 5%;
-            overflow: hidden;
-            width: 20em;
-            height: 15.5em;
-            margin: 0.4em;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            h3 {
-                font-weight: 200;
-                font-size: 0.8em;
-                padding: 0 0.8em 1em 0.8em;
-            }
-            img {
-                height: 12em;
+        a {
+            color: black;
+            text-decoration: none;
 
-            }
-            a {
+            .items {
+                background-color: white;
+                flex-shrink: 0;
+                box-shadow: 0 0 5px 0 rgba(0,0,0, 0.2);
+                border-radius: 4px;
+                overflow: hidden;
+                width: 20em;
+                height: 15.5em;
+                margin: 0.8em;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
                 cursor: pointer;
+                h3 {
+                    font-weight: 200;
+                    font-size: 1em;
+                    padding: 0.8em;
+                }
+                img {
+                    width: 20em;
+                    height: 12em;
+                    object-fit: cover;
+                }
+    
+            }
+            p {
+                font-size: 4rem;
+                font-weight: lighter;
             }
         }
     }
@@ -96,6 +116,101 @@ main{
         background-color: $dark-pink;
         h2 {
             color: white;
+        }
+        .items:nth-child(4) {
+            background-color: white;
+           
+            
+        }
+    }
+}
+
+@media screen and (min-width: $small) {
+    body {
+        main {
+            .home-section{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 50px;
+                figure {
+                    padding: 50px 20px;
+                    #profile-picture {
+                        width: 320px;
+                        height: 320px;
+                    }
+                }
+                .home-body {
+                    padding: 50px 20px;
+                    p {
+                        width: 300px;
+                    }
+                    .button-items {
+                        flex-direction: column;
+                        justify-content: center;
+                    }
+                }
+            }
+
+            .posts {
+                .empty-child {
+                    width: 20em;
+                    height: 15.5em;
+                    margin: 0.8em; 
+                }
+            }
+        }
+    } 
+}
+@media screen and (min-width: $medium) {
+    body {
+        main {
+            .home-section{
+                figure {
+                    padding: 50px 20px;
+                    #profile-picture {
+                        width: 380px;
+                        height: 380px;
+                    }
+                }
+                .home-body {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    padding: 50px 40px;
+                    h1 {
+                        font-size: 3.2em;
+                    }
+                    h2 {
+                        font-size: 2.8em;
+                    }
+                    p {
+                        width: 520px;
+                        font-size: 1.2em;
+                    }
+                    .button-items {
+                        flex-direction: row;
+                        justify-content: center;
+                    }
+                }
+
+            }
+            .heading {
+                h3 {
+                    font-size: 3em;
+                }
+            }
+            .posts {
+                .items:hover {
+                    transition: 0.3s;
+                    margin-top: 0.6em;
+                    box-shadow: 0 0 8px 0 rgba(0,0,0, 0.4);
+                    background-color: $light-pink;
+                }
+                .empty-child {
+                    display: none;
+                }
+            }
         }
     }
 }

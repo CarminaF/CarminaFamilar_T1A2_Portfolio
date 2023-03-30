@@ -1,0 +1,101 @@
+@import "../index.scss";
+
+* {
+    margin: 0;
+    padding: 0; 
+    box-sizing: border-box;
+    font-family: $plain-font;
+    --post-width: 260px;
+    --post-height: 180px;
+}
+
+body {
+    main {
+        padding-top: 100px;
+        margin: auto;
+       // max-width: 100;
+        .row {
+            background-color: $translucent-pink;
+            border: 1px solid $light-pink;
+            border-radius: 4px;
+            width: 80%;
+            margin: 2em 10vw;
+            .heading {
+                width: 60%;
+                display: block;
+                margin: auto;
+                text-align: center;
+                h1 {
+                    font-family: $decorative-font;
+                    font-weight: lighter;
+                    font-size: 2em;
+                    padding-top: 30px;
+                    margin-bottom: 15px;
+                }
+            }
+            .article-container {
+                display: flex;
+                justify-content: center;
+                flex-wrap: wrap;
+                margin-bottom: 60px;
+                
+                //margin: auto;
+
+                .post-container {
+                    //margin-top: 50px;
+                    
+                    .post {
+                        width: var(--post-width);
+                        height: calc(var(--post-height) * 2.2);
+                        background-color: white;
+                        margin: 15px;
+                        box-shadow: 0 0 5px 0 rgba(0,0,0, 0.1);
+                        border-radius: 4px;
+                        overflow: hidden;
+                        img {
+                            width: var(--post-width);
+                            height: var(--post-height);
+                            object-fit: cover;
+                            
+                        }
+                        h4 {
+                            font-size: 1.2em;
+                            padding: 10px;
+                            a {
+                                text-decoration: none;
+                                color: black;
+                                &:hover {
+                                    text-decoration: underline;
+                                    color: $dark-pink;
+                                }
+                            }
+                        
+                            
+                        }
+                        p {
+                            padding: 10px;
+                            font-size: 0.8em;
+                            
+                        }
+                        
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: $small) {
+    body {
+        main {
+            .row {
+                .empty-child {
+                    display: block;
+                    width: var(--post-width);
+                    height: var(--post-height);
+                    margin: 15px;
+                }
+            }
+        }
+    }
+}
