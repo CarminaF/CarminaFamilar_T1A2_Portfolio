@@ -64,7 +64,7 @@ footer {
             i {
                 padding: 0 4px;
             }
-            p {
+            .contact-details-text {
                 font-size: 13px;
                 color: black;
                 padding: 0 1vw;
@@ -128,7 +128,7 @@ footer {
             justify-content: center;
             padding: 10px;
             .contact-detail-items {
-                p {
+                .contact-details-text {
                     color: black;
                     font-size: 20px;
                 }
