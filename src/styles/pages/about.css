@@ -303,8 +303,10 @@ body main .figure-and-article article h2 {
 body main .figure-and-article article p {
   padding-left: 30px;
 }
-body main .figure-and-article:nth-child(2) article {
+body main .figure-and-article:nth-child(2) {
   background-color: #F17178;
+}
+body main .figure-and-article:nth-child(2) article {
   color: white;
   text-align: right;
 }

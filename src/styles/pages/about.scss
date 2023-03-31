@@ -51,8 +51,8 @@ body {
         }
 
         .figure-and-article:nth-child(2) {
+            background-color: $dark-pink;
             article {
-                background-color: $dark-pink;
                 color: white;
                 text-align: right;
                 h2 {
