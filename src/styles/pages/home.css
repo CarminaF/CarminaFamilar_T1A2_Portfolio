@@ -308,6 +308,7 @@ main .home-section .home-body .button-items a {
   margin-bottom: 1em;
 }
 main .home-section .home-body .button-items a .home-section-button {
+  color: black;
   width: 14em;
   padding: 1.2em;
   border: 6px double white;
