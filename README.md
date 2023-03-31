@@ -1,7 +1,8 @@
 # Portfolio Website
 
 Here is the link to the published portfolio site:  
-https://www.github.com/CarminaF
+https://carminafamilar.netlify.app/
+
 <br>
 
 ## Purpose
