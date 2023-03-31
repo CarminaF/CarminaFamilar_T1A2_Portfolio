@@ -1,8 +1,12 @@
-footer {
+@mixin flex-wrap-center-space-around {
     display: flex;
-    justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+footer {
+    @include flex-wrap-center-space-around();
     padding: 15px;
     background-color: $light-pink;
     color: black;
@@ -29,12 +33,12 @@ footer {
     nav {
         font-family: $plain-font;
         margin-bottom: 20px;
-        margin-left: 20vw;
         ul {
             list-style: none;
             display: flex;
             flex-direction: column;
             align-items: flex-end;
+            margin-right: 15px;
             li {
                 a {
                     justify-self: flex-end;
@@ -50,29 +54,20 @@ footer {
         }
     }
     .contact-details {
+        @include flex-wrap-center-space-around();
         width: 100%;
-        display: flex;
         flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-        flex-wrap: wrap;
         .contact-detail-items {
             font-family: $plain-font;
-            display: flex;
-            flex-wrap: wrap;
-            align-items: center;
-            justify-content: center;
-            //padding: 0 0.5rem;
-            //white-space: nowrap;
+            @include flex-wrap-center-space-around();
+            padding: 0 10px;
             i {
-                //display: inline;
                 padding: 0 4px;
             }
             p {
                 font-size: 13px;
                 color: black;
                 padding: 0 1vw;
-                //margin: 0;
             }
         }
     }
@@ -90,9 +85,9 @@ footer {
                     transition: 0.3s;
                     transform: scale(1);
                 }
+                // adding bottom shadow and moving element up on nav-link hover
                 i:hover {
                     box-shadow: 0 -5px white inset;
-                    //text-decoration: underline;
                     padding: 15px 20px 25px 20px;
                 }
             }
@@ -115,9 +110,9 @@ footer {
                         transition: 0.3s;
                         font-size: 18px;
                         padding: 20px 20px;
+                        // adding bottom shadow and moving element up on nav-link hover
                         &:hover {
                             box-shadow: 0 -5px white inset;
-                            //text-decoration: underline;
                             padding: 15px 20px 25px 20px;
                         }
                         
@@ -132,9 +127,6 @@ footer {
             flex-direction: row;
             justify-content: center;
             padding: 10px;
-            // position: relative;
-            // bottom: 1vh;
-            // right: 16vw;
             .contact-detail-items {
                 p {
                     font-size: 20px;

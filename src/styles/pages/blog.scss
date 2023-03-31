@@ -1,19 +1,16 @@
 @import "../index.scss";
 
-* {
-    margin: 0;
-    padding: 0; 
-    box-sizing: border-box;
-    font-family: $plain-font;
+:root {
     --img-width: 260px;
     --img-height: 180px;
+    --post-height: calc(var(--img-height) * 2.4);
 }
 
 body {
     main {
         padding-top: 100px;
         margin: auto;
-
+        font-family: $plain-font;
         .row {
             background-color: $light-pink;
             border: 1px solid $dark-pink;
@@ -38,17 +35,11 @@ body {
                 justify-content: center;
                 flex-wrap: wrap;
                 margin-bottom: 60px;
-                
-                //margin: auto;
-
-                .post-container {
-                    //margin-top: 50px;
-                    
+                .post-container {                    
                     .post {
                         width: var(--img-width);
-                        height: calc(var(--img-height) * 2.4);
+                        height: var(--post-height);
                         background-color: white;
-                        //flex: 1;
                         margin: 15px;
                         box-shadow: 0 0 5px 0 rgba(0,0,0, 0.1);
                         border-radius: 4px;
@@ -56,8 +47,7 @@ body {
                         img {
                             width: var(--img-width);
                             height: var(--img-height);
-                            object-fit: cover;
-                            
+                            object-fit: cover;  
                         }
                         h4 {
                             font-size: 1.2em;
@@ -69,15 +59,12 @@ body {
                                     text-decoration: underline;
                                     color: $dark-pink;
                                 }
-                            }
-                            
+                            } 
                         }
                         p {
                             padding: 10px;
                             font-size: 0.8em;
-                            
                         }
-                        
                     }
                 }
             }
@@ -85,9 +72,11 @@ body {
     }
 }
 
+// .empty-child ensures that previous flex item is aligned to the left, not center  
 @media screen and (min-width: $small) {
     body {
         main {
+            padding-top: 50px;
             .row {
                 .empty-child {
                     display: block;

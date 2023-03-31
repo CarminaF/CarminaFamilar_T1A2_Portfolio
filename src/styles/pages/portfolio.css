@@ -1,9 +1,4 @@
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
+/* Using bootstrap screen sizes */
 header {
   width: 100%;
   display: flex;
@@ -133,6 +128,7 @@ header .navbar .menu li a:hover {
     padding: 30px;
     font-size: 22px;
     color: white;
+    box-shadow: none;
   }
   header .navbar input:checked ~ .menu {
     right: 0;
@@ -141,9 +137,9 @@ header .navbar .menu li a:hover {
 }
 footer {
   display: flex;
-  justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
+  justify-content: space-around;
   padding: 15px;
   background-color: #FFB5A7;
   color: black;
@@ -169,13 +165,13 @@ footer .line-separator {
 footer nav {
   font-family: "Nunito", sans-serif;
   margin-bottom: 20px;
-  margin-left: 20vw;
 }
 footer nav ul {
   list-style: none;
   display: flex;
   flex-direction: column;
   align-items: flex-end;
+  margin-right: 15px;
 }
 footer nav ul li a {
   justify-self: flex-end;
@@ -188,19 +184,20 @@ footer nav ul li a:visited {
   color: black;
 }
 footer .contact-details {
-  width: 100%;
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
+  justify-content: space-around;
+  width: 100%;
+  flex-direction: row;
 }
 footer .contact-details .contact-detail-items {
   font-family: "Nunito", sans-serif;
   display: flex;
-  flex-wrap: wrap;
   align-items: center;
-  justify-content: center;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 0 10px;
 }
 footer .contact-details .contact-detail-items i {
   padding: 0 4px;
@@ -261,14 +258,18 @@ footer .contact-details .contact-detail-items p {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Nunito", sans-serif;
-  --post-width: 260px;
-  --post-height: 180px;
+}
+
+:root {
+  --img-width: 260px;
+  --img-height: 180px;
+  --post-height: calc(var(--img-height) * 2.4);
 }
 
 body main {
   padding-top: 100px;
   margin: auto;
+  font-family: "Nunito", sans-serif;
 }
 body main .row {
   background-color: rgba(255, 182, 167, 0.0823529412);
@@ -297,8 +298,8 @@ body main .row .article-container {
   margin-bottom: 60px;
 }
 body main .row .article-container .post-container .post {
-  width: var(--post-width);
-  height: calc(var(--post-height) * 2.2);
+  width: var(--img-width);
+  height: var(--post-height);
   background-color: white;
   margin: 15px;
   box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.1);
@@ -306,8 +307,8 @@ body main .row .article-container .post-container .post {
   overflow: hidden;
 }
 body main .row .article-container .post-container .post img {
-  width: var(--post-width);
-  height: var(--post-height);
+  width: var(--img-width);
+  height: var(--img-height);
   -o-object-fit: cover;
      object-fit: cover;
 }
@@ -329,9 +330,12 @@ body main .row .article-container .post-container .post p {
 }
 
 @media screen and (min-width: 768px) {
+  body main {
+    padding-top: 50px;
+  }
   body main .row .empty-child {
     display: block;
-    width: var(--post-width);
+    width: var(--img-width);
     height: var(--post-height);
     margin: 15px;
   }

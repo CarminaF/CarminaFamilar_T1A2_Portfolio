@@ -7,12 +7,6 @@
     transition: 0.3s;
 }
 
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
 header {
     width: 100%;
     display: flex;
@@ -27,7 +21,6 @@ header {
             font-size: 22px;
             color: black;
             text-decoration: none;
-            
         }
     }
     .hamburger {
@@ -64,12 +57,10 @@ header {
         input:checked ~ .hamburger::before {
             top: 0;
             transform: rotate(45deg);
-           // position: sticky;
         }
         input:checked ~ .hamburger::after {
             top: 0;
             transform: rotate(-45deg);
-            //position: sticky;
         }
         .toggle-menu {
             position: absolute;
@@ -122,8 +113,9 @@ header {
             .toggle-menu {
             display: block;
             position: fixed;
-            right: 15px;;
+            right: 15px;
             }
+            //translate origin to the right of the screen when hamburger menu unchecked
             .menu {
                 justify-content: start;
                 flex-direction: column;
@@ -134,28 +126,23 @@ header {
                 background-color: $dark-pink;
                 width: 300px;
                 height: 100vh;
-                padding-top: 60px;
-               
+                padding-top: 60px;           
                 li {
                     width: 100%;
-
                     a, a:hover {
                         padding: 30px;
                         font-size: 22px;
                         color: white;
-                        //box-shadow: 0 1px 0 rgba(255, 255, 255, 0.245) inset;
+                        box-shadow: none;
                     }
                 }
             }
+            //translating origin of menu to show on screen and adding shadow when hamburger is checked
             input:checked ~ .menu{
                 right: 0;
-                box-shadow: -5px 0 20px rgba(0,0,0,0.2);
-                
+                box-shadow: -5px 0 20px rgba(0,0,0,0.2);                
             }
-
         }
-
-
     }
     
 }

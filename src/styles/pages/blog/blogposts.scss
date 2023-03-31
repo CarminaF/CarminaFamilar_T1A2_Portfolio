@@ -1,19 +1,17 @@
 @import "../../index.scss";
 
-* {
-    margin: 0;
-    padding: 0; 
-    box-sizing: border-box;
-    font-family: $plain-font;
+@mixin flex-center-column {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
 body {
     main {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        padding: 100px 40px 50px 40px;
+        @include flex-center-column();
+        font-family: $plain-font;
+        padding: 60px 40px 50px 40px;
         a {
             color: $dark-pink;
             padding-top: 50px;
@@ -24,10 +22,7 @@ body {
             }
         }
         article {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
+            @include flex-center-column();
             background-color: $translucent-pink;
             border: 1px solid $light-pink;
             border-radius: 4px;
@@ -53,6 +48,7 @@ body {
 @media screen and (min-width: $medium) {
     body {
         main {
+            padding-top: 0;
             article {
                 max-width: 820px;
             }
