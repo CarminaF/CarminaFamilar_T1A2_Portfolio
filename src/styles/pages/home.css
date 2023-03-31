@@ -251,6 +251,7 @@ footer .contact-details .contact-detail-items p {
     padding: 10px;
   }
   footer .contact-details .contact-detail-items p {
+    color: black;
     font-size: 20px;
   }
 }
@@ -303,6 +304,7 @@ main .home-section .home-body .button-items {
 }
 main .home-section .home-body .button-items a {
   text-decoration: none;
+  color: black;
   margin-bottom: 1em;
 }
 main .home-section .home-body .button-items a .home-section-button {

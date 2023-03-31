@@ -91,10 +91,10 @@ The footer contains the same navigation links as the header so the user does not
 
 ```html
 <section class="social-media-logos">
-    <a href="https://github.com/CarminaF">
+    <a href="https://github.com/CarminaF" target="_blank">
         <i class="fab fa-github fa-3x" alt="Github Link"></i>
     </a>
-    <a href="https://www.linkedin.com/in/carmina-familar/">
+    <a href="https://www.linkedin.com/in/carmina-familar/" target="_blank">
         <i class="fa-brands fa-linkedin fa-3x" alt="LinkedIn Link"></i>
     </a>
 </section>

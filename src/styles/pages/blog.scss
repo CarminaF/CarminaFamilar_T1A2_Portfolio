@@ -1,9 +1,9 @@
 @import "../index.scss";
 
 :root {
-    --img-width: 260px;
-    --img-height: 180px;
-    --post-height: calc(var(--img-height) * 2.4);
+    --img-width: 300px;
+    --img-height: 200px;
+    --post-height: calc(var(--img-height) * 2.2);
 }
 
 body {
@@ -15,8 +15,8 @@ body {
             background-color: $light-pink;
             border: 1px solid $dark-pink;
             border-radius: 4px;
-            width: 80%;
-            margin: 2em 10vw;
+            width: 90%;
+            margin: 2em 5vw;
             .heading {
                 width: 60%;
                 display: block;
