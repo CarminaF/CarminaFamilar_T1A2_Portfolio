@@ -1,5 +1,14 @@
 @import "../index.scss";
 
+
+// This page is essentially the same as the blog.scss except for background
+// color but I wanted to create a separate file for better readability and customization 
+// in the future
+
+
+/*
+    Initializing variables to be used in this page
+*/
 :root {
     --img-width: 300px;
     --img-height: 200px;
@@ -7,21 +16,32 @@
 }
 
 body {
+    /*
+        Initialize default font of sans serif Nunito on the main component
+    */
     main {
         padding-top: 100px;
-        margin: auto;
         font-family: $plain-font;
+        /*
+            The translucent pink container for the cards
+        */
         .row {
             background-color: $translucent-pink;
             border: 1px solid $light-pink;
             border-radius: 4px;
             width: 90%;
             margin: 2em 5vw;
+            /*
+                The container for the page heading
+            */
             .heading {
                 width: 60%;
                 display: block;
                 margin: auto;
                 text-align: center;
+                 /*
+                    Turns page heading into cursive Pacifico font
+                */
                 h1 {
                     font-family: $decorative-font;
                     font-weight: lighter;
@@ -30,12 +50,23 @@ body {
                     margin-bottom: 15px;
                 }
             }
+            /*
+                container for all cards excluding the page header
+            */
             .article-container {
                 display: flex;
                 justify-content: center;
                 flex-wrap: wrap;
                 margin-bottom: 60px;
+                /*
+                    .post-container contains the image, heading and text
+                    These elements have a flex display
+                */
                 .post-container {
+                    /*
+                        Initialize each card to have the same width as image width but longer 
+                        height than the image height as calculated in :root
+                    */   
                     .post {
                         width: var(--img-width);
                         height: var(--post-height);
@@ -44,6 +75,11 @@ body {
                         box-shadow: 0 0 5px 0 rgba(0,0,0, 0.1);
                         border-radius: 4px;
                         overflow: hidden;
+                        /*
+                            Image size variables are defined int the :root. 
+                            object-fit: cover reduces size of image to specified 
+                            widths and heights without losing its ratio, preventing stretch
+                        */
                         img {
                             width: var(--img-width);
                             height: var(--img-height);
@@ -55,6 +91,9 @@ body {
                             a {
                                 text-decoration: none;
                                 color: black;
+                                /*
+                                    Changes color of card heading to pink and adds underline on hover and on click
+                                */
                                 &:hover {
                                     text-decoration: underline;
                                     color: $dark-pink;
@@ -77,6 +116,9 @@ body {
         main {
             padding-top: 50px;
             .row {
+                /*
+                    empty-child ensures that previous flex item is aligned to the left, not center 
+                */ 
                 .empty-child {
                     display: block;
                     width: var(--img-width);

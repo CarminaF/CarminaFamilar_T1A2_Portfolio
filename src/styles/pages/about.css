@@ -1,4 +1,10 @@
-/* Using bootstrap screen sizes */
+/* Using bootstrap screen sizes */ /*
+    Utilizing hamburger-lines mix-in to make three lines for the mobile menu
+*/
+/*
+    The header displays horizontally on the top of the page
+    It has a light pink background. This is currently for the desktop version
+*/
 header {
   width: 100%;
   display: flex;
@@ -7,6 +13,24 @@ header {
   padding: 0 25px;
   background-color: #FFB5A7;
   transition: 0.3s;
+  /*
+      The .logo is a cursive text of the developer's name
+  */
+  /*
+      .hamburger is the middle of the three white lines for the menu
+  */
+  /*
+      The hamburger and toggle-menu (which is the checkbox) are not displayed on desktop
+  */
+  /*
+      The navbar that appears on the desktop version. The links are visible and is not currently collapsed
+  */
+}
+header .logo {
+  /*
+      This <a> element turns the cursive logo text into a link that 
+      redirects users back to the home page
+  */
 }
 header .logo a {
   font-family: "Pacifico", cursive;
@@ -23,6 +47,16 @@ header .hamburger {
   width: 30px;
   border-radius: 10px;
   transition: 0.3s;
+  /*
+      The &:before, &:after creates two white lines with identical styling to
+      the middle white line of the hamburger menu
+  */
+  /*
+      The &:before positions one of the white lines above the middle line
+  */
+  /*
+      The &:after positions one of the white lines below the middle line
+  */
 }
 header .hamburger:before, header .hamburger:after {
   content: "";
@@ -49,6 +83,27 @@ header .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  /*
+      This input is currently not displayed as this is only displayed when on mobile.
+      When on mobile and the input (.toggle-menu) is checked, the top and bottom
+      hamburger lines rotate to form an 'x' and the middle line disappears.
+  */
+  /*
+      the top hamburger line rotates 45deg clockwise when checked
+  */
+  /*
+      the bottom hamburger line rotates 45deg anti-clockwise when checked
+  */
+  /*
+      This is the input menu currently not displayed. 
+      We are just initializing the properties here
+  */
+  /*
+      The .menu class is an unordered list containing all the nav links
+      On desktop it is displayed horizontally
+      The z-index ensures the menu is overlapping the page
+      The transition property dictates the duration of the hover pseudo class in the nav links
+  */
 }
 header .navbar input:checked ~ .hamburger {
   background: transparent;
@@ -76,9 +131,15 @@ header .navbar .menu {
   align-items: center;
   z-index: 5;
   transition: 0.5s;
+  /*
+      Each link is a list item in an unordered list
+  */
 }
 header .navbar .menu li {
   list-style: none;
+  /*
+      The <a> tag turn the list into a link
+  */
 }
 header .navbar .menu li a {
   font-family: "Nunito", sans-serif;
@@ -89,6 +150,9 @@ header .navbar .menu li a {
   font-size: 18px;
   line-height: 1;
   transition: 0.3s;
+  /*
+      On desktop 
+  */
 }
 header .navbar .menu li a:hover {
   border-top-left-radius: 5px;
@@ -102,6 +166,16 @@ header .navbar .menu li a:hover {
   header {
     padding: 10px 20px;
     position: fixed;
+    /*
+        The below turns on the visibility of the hamburger menu and toggle menu
+    */
+  }
+  header .navbar {
+    /*
+        The menu's origin is translated to the right of the screen 
+        when hamburger menu unchecked. It also displays the menu vertically 
+        on mobile and changes the color to dark pink
+    */
   }
   header .navbar .hamburger,
   header .navbar .toggle-menu {
@@ -123,6 +197,10 @@ header .navbar .menu li a:hover {
   }
   header .navbar .menu li {
     width: 100%;
+    /*
+        resizes the padding of navigation links, changes its font color
+        and turns off the hover effect on mobile
+    */
   }
   header .navbar .menu li a, header .navbar .menu li a:hover {
     padding: 30px;
@@ -135,6 +213,9 @@ header .navbar .menu li a:hover {
     box-shadow: -5px 0 20px rgba(0, 0, 0, 0.2);
   }
 }
+/*
+    The footer is at the bottom of the page has a light pink background
+*/
 footer {
   display: flex;
   align-items: center;
@@ -144,11 +225,34 @@ footer {
   background-color: #FFB5A7;
   color: black;
   transition: 0.3s;
+  /*
+      The social media logos class is a section containing both the black 
+      GitHub and LinkedIn Font-Awesome icons/logos on the page 
+  */
+  /*
+      This .line-separator is a pink vertical line that separates the icons
+      and nav links to create a nice visual divider
+  */
+  /*
+      The <nav> element contains the links to the different pages of the site. 
+  */
+  /*
+      .contact-details contains both the email and contact number in the footer
+  */
 }
 footer .social-media-logos {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  /*
+      The <a> tag encapsulates each individual GitHub and LinkedIn Font-Awesome icon
+      and turns it into a link
+  */
+}
+footer .social-media-logos a {
+  /*
+      The <i> tag is a single Font-Awesome icon
+  */
 }
 footer .social-media-logos a i {
   padding: 20px;
@@ -165,6 +269,10 @@ footer .line-separator {
 footer nav {
   font-family: "Nunito", sans-serif;
   margin-bottom: 20px;
+  /*
+      The navigation links are organized in a single unordered list.
+      On mobile it is displayed as a column.
+  */
 }
 footer nav ul {
   list-style: none;
@@ -172,6 +280,19 @@ footer nav ul {
   flex-direction: column;
   align-items: flex-end;
   margin-right: 15px;
+  /*
+      Each link is represented as a list item but we do not want it to
+      appear with bullet points thus the text-decoration:none was used.
+  */
+}
+footer nav ul li {
+  /*
+      This <a> tag turns the list item into a link
+  */
+  /*
+      This a:visited selector changes the default 
+      color of the visited link from purple to black
+  */
 }
 footer nav ul li a {
   justify-self: flex-end;
@@ -190,6 +311,9 @@ footer .contact-details {
   justify-content: space-around;
   width: 100%;
   flex-direction: row;
+  /*
+      .contact-detail-items is the email and phone in separate containers
+  */
 }
 footer .contact-details .contact-detail-items {
   font-family: "Nunito", sans-serif;
@@ -198,6 +322,12 @@ footer .contact-details .contact-detail-items {
   flex-wrap: wrap;
   justify-content: space-around;
   padding: 0 10px;
+  /*
+      This <i> tag is to format the font-awesome icon of mail and phone
+  */
+  /*
+      .contact-details-text is the text of the email and phone number
+  */
 }
 footer .contact-details .contact-detail-items i {
   padding: 0 4px;
@@ -213,6 +343,12 @@ footer .contact-details .contact-detail-items .contact-details-text {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    /*
+        Making .line-separator longer on bigger screens
+    */
+    /*
+        Displays navigation bar as row
+    */
   }
   footer .social-media-logos a i {
     margin: 0 3vw;
@@ -239,6 +375,9 @@ footer .contact-details .contact-detail-items .contact-details-text {
     transition: 0.3s;
     font-size: 18px;
     padding: 20px 20px;
+    /*
+         adding bottom shadow and moving element up on nav-link hover
+    */
   }
   footer nav ul li a:hover {
     box-shadow: 0 -5px white inset;
@@ -255,12 +394,26 @@ footer .contact-details .contact-detail-items .contact-details-text {
     font-size: 20px;
   }
 }
+/*
+    By default components have padding and margin
+    The below sets everything to 0
+    border-box makes sure that padding and border are included in the width total
+*/
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/*
+    Mix-ins for reusability and consistency
+*/
+body {
+  /*
+      The main section of the page will utilize flex-box.
+      For mobile, elements will appear as a column
+  */
+}
 body main {
   display: flex;
   flex-direction: column;
@@ -268,16 +421,38 @@ body main {
   font-family: "Nunito", sans-serif;
   padding-top: 55px;
   background-color: rgba(255, 182, 167, 0.0823529412);
+  /*
+      Each image and text are a set contained within a .figure-and-article 
+      for styling purposes for desktop. On mobile it will appear vertically
+  */
+  /*
+      .figure-and-article:nth-child(2) is the second set of image and text.
+      It has a dark pink background for the text. This is mobile styling but later we will change it's flex direction
+      on desktop
+  */
 }
 body main .figure-and-article {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
+  /*
+      This .img-section is a <figure> tag adding semantics and
+      and the styling flexibility of a div. 
+  */
+  /*
+      The text is contained in an article tag for better accessability. The mobile version has also the same 
+      width and height as the mobile version of the image
+  */
 }
 body main .figure-and-article .img-section {
   width: 100vw;
   height: 75vw;
   overflow: hidden;
+  /*
+      The individual image is displaying 100% width and height of the parent element
+      which is the <firgure> tag. The object-fit: cover property scales down the image to cover
+      the div without losing its width snd height ratio
+  */
 }
 body main .figure-and-article .img-section img {
   width: 100%;
@@ -294,6 +469,11 @@ body main .figure-and-article article {
   flex-wrap: nowrap;
   justify-content: center;
   padding: 20px;
+  /*
+      The h2 title in each article is in cursive Pacifico font.
+      I used a lighter font weight as this font looked better lighter and
+      h2 defaults to a thicker font weight
+  */
 }
 body main .figure-and-article article h2 {
   font-weight: lighter;
@@ -321,6 +501,14 @@ body main .figure-and-article:nth-child(2) article p {
 @media screen and (min-width: 768px) {
   body main {
     padding-top: 0;
+    /*
+        On table, the flex direction of each image and text set are changed to row so that each image is
+        accompanied by a text beside it, making use of the extra width on tablets and desktop
+    */
+    /*
+        Alternating the second row to put the article to left then image to the right
+        without using order property
+    */
   }
   body main .figure-and-article {
     flex-direction: row;
@@ -339,6 +527,11 @@ body main .figure-and-article:nth-child(2) article p {
   }
 }
 @media screen and (min-width: 1025px) {
+  body main .figure-and-article article {
+    /*
+        Making heading and text bigger on desktop
+    */
+  }
   body main .figure-and-article article h2 {
     font-size: 2em;
   }

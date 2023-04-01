@@ -1,5 +1,8 @@
 @import "../index.scss";
 
+/*
+    Mix-ins for reusability and consistency
+*/
 @mixin flex-col-wrap {
     display: flex;
     flex-direction: column;
@@ -15,29 +18,57 @@
     width: 46vw;
     height: 40vw;
 }
+
+
 body {
+    /*
+        The main section of the page will utilize flex-box.
+        For mobile, elements will appear as a column
+    */
     main {
         @include flex-col-wrap();
         font-family: $plain-font;
         padding-top: 55px;
         background-color: $translucent-pink;
+        /*
+            Each image and text are a set contained within a .figure-and-article 
+            for styling purposes for desktop. On mobile it will appear vertically
+        */
         .figure-and-article {
             @include flex-col-wrap();
+            /*
+                This .img-section is a <figure> tag adding semantics and
+                and the styling flexibility of a div. 
+            */
             .img-section {
                 @include mobile-width-height();
                 overflow: hidden;
+                /*
+                    The individual image is displaying 100% width and height of the parent element
+                    which is the <firgure> tag. The object-fit: cover property scales down the image to cover
+                    the div without losing its width snd height ratio
+                */
                 img {
                     width: 100%;
                     height: 100%;
                     object-fit: cover;
                 }
             }
+            /*
+                The text is contained in an article tag for better accessability. The mobile version has also the same 
+                width and height as the mobile version of the image
+            */
             article {
                 @include mobile-width-height();
                 @include flex-col-wrap();
                 flex-wrap: nowrap;
                 justify-content: center;
                 padding: 20px;
+                /*
+                    The h2 title in each article is in cursive Pacifico font.
+                    I used a lighter font weight as this font looked better lighter and
+                    h2 defaults to a thicker font weight
+                */
                 h2 {
                     font-weight: lighter;
                     font-family: $decorative-font;
@@ -49,7 +80,11 @@ body {
             }
             
         }
-
+        /*
+            .figure-and-article:nth-child(2) is the second set of image and text.
+            It has a dark pink background for the text. This is mobile styling but later we will change it's flex direction
+            on desktop
+        */
         .figure-and-article:nth-child(2) {
             background-color: $dark-pink;
             article {
@@ -71,6 +106,10 @@ body {
     body {
         main {
             padding-top: 0;
+            /*
+                On table, the flex direction of each image and text set are changed to row so that each image is
+                accompanied by a text beside it, making use of the extra width on tablets and desktop
+            */
             .figure-and-article {
                 flex-direction: row;
                 .img-section {  
@@ -81,8 +120,10 @@ body {
                     @include tablet-laptop-width-height();
                 }
             }
-            // Alternating the second row to put the article to left then image to the right
-            // without using order property
+            /*
+                Alternating the second row to put the article to left then image to the right
+                without using order property
+            */
             .figure-and-article:nth-child(2) {
                 flex-direction: row-reverse;
             }
@@ -96,6 +137,9 @@ body {
         main {
             .figure-and-article {
                 article {
+                    /*
+                        Making heading and text bigger on desktop
+                    */
                     h2 {
                         font-size: 2em;
                     }

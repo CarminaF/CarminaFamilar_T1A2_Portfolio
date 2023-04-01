@@ -2,17 +2,29 @@
 
 
 main{
+    /*
+        Default font for all text in main is Nunito
+    */
     font-family: $plain-font;
-    article {
-        padding: 20px;
-    }
+    /*
+        .home-section encapsulates the circle profile picture, headings, brief description,
+        and the two buttons
+    */
     .home-section{
         padding: 110px 32px 10px 32px;
         text-align: center;
+        /*
+            The profile picture is contained within this <figure> tag
+            Adds semantics and stylistic freedom (ability to center etc)
+        */
         figure {
             display: flex;
             justify-content: center;
             padding: 20px;
+            /*
+                The profile picture which has a subtle shadow and is circular 
+                from the border radius property
+            */
             #profile-picture {
                 width: 240px;
                 height: 240px;
@@ -20,30 +32,53 @@ main{
                 box-shadow: 0 10px 23px -13px rgba(0,0,0,0.35);
             }
         }
+        /*
+            .home-body encapsulates the headings, text and buttons
+        */
         .home-body {
+            /*
+                The "Carmina Familar" text in cursive Pacifico font
+                This font looks better with lighter font-weight, the h1 is bold in default
+            */
             h1 {
                 font-family: $decorative-font;
                 font-weight: lighter;
                 font-size: 2em;
                 margin: 0 0 0 0; 
             }
+            /*
+                The "Software Developer" text in Nunito font (defined in main)
+            */
             h2 {
                 font-weight: 200;
                 font-size: 1.2em;
                 margin: 0 0 0 0;
             }
+            /*
+                The brief description above the buttons in smaller font size
+            */
             p {
                 font-size: 0.8em;
                 padding: 1em;
             }
+            /*
+                The pink call-to-action buttons on the homepage
+            */
             .button-items{
                 display: flex;
                 flex-direction: column;
                 align-items: center;
+                /*
+                    Turn the button to a hyperlink with font styled in black instead of the default
+                    royal blue for links
+                */
                 a {
                     text-decoration: none;
                     color: black;
                     margin-bottom: 1em;
+                    /*
+                        The button element itself. Styled in light pink
+                    */
                     .home-section-button {
                         color: black;
                         width: 14em;
@@ -53,11 +88,6 @@ main{
                         font-size: 1em;
                         cursor: pointer;
                         background-color: $light-pink;
-                        &:hover {
-                            transition: 0.3s;
-                            background-color: $dark-pink;
-                            color: white;
-                        }
                     }
                     
                 }
@@ -65,21 +95,42 @@ main{
             }
         }
     }
+    /*
+        Creates space between containers of blog and portfolio
+    */
+    article {
+        padding: 20px;
+    }
+    /*
+        Individual containers for "Blog" and "Portfolio" heading
+    */
     .heading {
         text-align: center;
         padding-top: 20px;
+        /*
+            "Blog" and "Portfolio" heading in Pacifico cursive font
+        */
         h2 {
             font-family: $decorative-font;
             font-weight: lighter;
         }
     }
+    /*
+        .posts is the container for the cards in the "Blog" and "Portfolio" sections
+    */
     .posts {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
+        /*
+            This <a> tag turns the card into a link
+        */
         a {
             color: black;
             text-decoration: none;
+            /*
+                This is each individual card containing an image and heading
+            */
             .items {
                 background-color: white;
                 flex-shrink: 0;
@@ -94,17 +145,25 @@ main{
                 align-items: center;
                 justify-content: center;
                 text-align: center;
+                /*
+                    A heading for each card
+                */
                 h3 {
                     font-weight: 200;
                     font-size: 1em;
                     padding: 0.8em;
                 }
+                /*
+                    The image contained within a card
+                */
                 img {
-                    width: 20em;
-                    height: 12em;
+                    width: 100%;
+                    height: 25em;
                     object-fit: cover;
                 }
-    
+            /*
+                The "View Portfolio" and "View Blog" text
+            */
             }
             p {
                 font-size: 4rem;
@@ -112,15 +171,16 @@ main{
             }
         }
     }
+    /*
+        Turn portfolio section of homepage dark pink
+    */
     .portfolio {
         background-color: $dark-pink;
+        /*
+            Turns "Portfolio" heading white
+        */
         h2 {
             color: white;
-        }
-        .items:nth-child(4) {
-            background-color: white;
-           
-            
         }
     }
 }
@@ -128,18 +188,31 @@ main{
 @media screen and (min-width: $small) {
     body {
         main {
+            /*
+                .home-section encapsulates the circle profile picture, headings, brief description,
+                and the two buttons. Display is flex on tablet and desktop
+            */
             .home-section{
                 display: flex;
                 justify-content: center;
                 align-items: center;
                 padding: 50px;
+                /*
+                    figure is manipulated for tablet to create space between photo and texts/buttons
+                */
                 figure {
                     padding: 50px 20px;
+                    /*
+                        larger photo for larger tablet screen
+                    */
                     #profile-picture {
                         width: 320px;
                         height: 320px;
                     }
                 }
+                /*
+                    Creates space in text and button container to distance from photo next to it
+                */
                 .home-body {
                     padding: 50px 20px;
                     p {
@@ -152,12 +225,9 @@ main{
                 }
             }
             .posts {
-                .a {
-                    .items {
-                        cursor: pointer;
-                    }
-                }
-                //aligns wrapped previous flex item to the left
+                /* 
+                    aligns previous wrapped flex item (aka card for projects and blog post) to the left on tablet
+                */
                 .empty-child {
                     width: 20em;
                     height: 15.5em;
@@ -171,17 +241,23 @@ main{
     body {
         main {
             .home-section{
+                /*
+                    Larger padding for photo section to make use of the wider space
+                */
                 figure {
                     padding: 50px 20px;
+                    /*
+                        Larger padding for photo to make use of the wider space
+                    */
                     #profile-picture {
                         width: 380px;
                         height: 380px;
                     }
                 }
+                /*
+                    Bigger fonts sizes for desktop
+                */
                 .home-body {
-                    display: flex;
-                    flex-direction: column;
-                    align-items: center;
                     padding: 50px 40px;
                     h1 {
                         font-size: 3.2em;
@@ -189,32 +265,64 @@ main{
                     h2 {
                         font-size: 2.8em;
                     }
+                    /*
+                        Wider width for paragraph on desktop
+                    */
                     p {
                         width: 520px;
                         font-size: 1.2em;
                     }
+                    /*
+                        Set make buttons appear next to each other to make use of the desktop 
+                        width using flex-direction:row
+                    */
                     .button-items {
                         flex-direction: row;
-                        justify-content: center;
                         a {
+                            /*
+                                Add space when buttons next to each other
+                            */
                             margin: 10px;
+                            /*
+                                Change button background color on hover to dark pink
+                                for desktop only
+                            */
+                            .home-section-button:hover {
+                                transition: 0.3s;
+                                background-color: $dark-pink;
+                                color: white;
+                            }
                         }
                     }
                 }
 
             }
+            /*
+                Make "Blog" and "Portfolio" heading bigger on desktop
+            */
             .heading {
                 h3 {
                     font-size: 3em;
                 }
             }
+            /*
+                Add hover effect on each portfolio and blog card on desktop only.
+                Change background from white to light pink, darken shadow, and 
+                reduce margin top for uplifted 3d effect
+            */
             .posts {
-                .items:hover {
-                    transition: 0.3s;
-                    margin-top: 0.6em;
-                    box-shadow: 0 0 8px 0 rgba(0,0,0, 0.4);
-                    background-color: $light-pink;
+                a {
+                    .items {
+                        &:hover {
+                            transition: 0.3s;
+                            margin-top: 0.6em;
+                            box-shadow: 0 0 8px 0 rgba(0,0,0, 0.4);
+                            background-color: $light-pink;
+                        }
+                    }
+                    
                 }
+                
                 //disappears as flex items should now fit in one row (no wrap)
                 .empty-child {
                     display: none;

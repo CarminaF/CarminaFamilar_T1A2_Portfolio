@@ -1,4 +1,14 @@
-/* Using bootstrap screen sizes */
+/*
+    Imports non-main components and global variables
+    This file is then imported into each respective pages' css files
+*/
+/* Using bootstrap screen sizes */ /*
+    Utilizing hamburger-lines mix-in to make three lines for the mobile menu
+*/
+/*
+    The header displays horizontally on the top of the page
+    It has a light pink background. This is currently for the desktop version
+*/
 header {
   width: 100%;
   display: flex;
@@ -7,6 +17,24 @@ header {
   padding: 0 25px;
   background-color: #FFB5A7;
   transition: 0.3s;
+  /*
+      The .logo is a cursive text of the developer's name
+  */
+  /*
+      .hamburger is the middle of the three white lines for the menu
+  */
+  /*
+      The hamburger and toggle-menu (which is the checkbox) are not displayed on desktop
+  */
+  /*
+      The navbar that appears on the desktop version. The links are visible and is not currently collapsed
+  */
+}
+header .logo {
+  /*
+      This <a> element turns the cursive logo text into a link that 
+      redirects users back to the home page
+  */
 }
 header .logo a {
   font-family: "Pacifico", cursive;
@@ -23,6 +51,16 @@ header .hamburger {
   width: 30px;
   border-radius: 10px;
   transition: 0.3s;
+  /*
+      The &:before, &:after creates two white lines with identical styling to
+      the middle white line of the hamburger menu
+  */
+  /*
+      The &:before positions one of the white lines above the middle line
+  */
+  /*
+      The &:after positions one of the white lines below the middle line
+  */
 }
 header .hamburger:before, header .hamburger:after {
   content: "";
@@ -49,6 +87,27 @@ header .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  /*
+      This input is currently not displayed as this is only displayed when on mobile.
+      When on mobile and the input (.toggle-menu) is checked, the top and bottom
+      hamburger lines rotate to form an 'x' and the middle line disappears.
+  */
+  /*
+      the top hamburger line rotates 45deg clockwise when checked
+  */
+  /*
+      the bottom hamburger line rotates 45deg anti-clockwise when checked
+  */
+  /*
+      This is the input menu currently not displayed. 
+      We are just initializing the properties here
+  */
+  /*
+      The .menu class is an unordered list containing all the nav links
+      On desktop it is displayed horizontally
+      The z-index ensures the menu is overlapping the page
+      The transition property dictates the duration of the hover pseudo class in the nav links
+  */
 }
 header .navbar input:checked ~ .hamburger {
   background: transparent;
@@ -76,9 +135,15 @@ header .navbar .menu {
   align-items: center;
   z-index: 5;
   transition: 0.5s;
+  /*
+      Each link is a list item in an unordered list
+  */
 }
 header .navbar .menu li {
   list-style: none;
+  /*
+      The <a> tag turn the list into a link
+  */
 }
 header .navbar .menu li a {
   font-family: "Nunito", sans-serif;
@@ -89,6 +154,9 @@ header .navbar .menu li a {
   font-size: 18px;
   line-height: 1;
   transition: 0.3s;
+  /*
+      On desktop 
+  */
 }
 header .navbar .menu li a:hover {
   border-top-left-radius: 5px;
@@ -102,6 +170,16 @@ header .navbar .menu li a:hover {
   header {
     padding: 10px 20px;
     position: fixed;
+    /*
+        The below turns on the visibility of the hamburger menu and toggle menu
+    */
+  }
+  header .navbar {
+    /*
+        The menu's origin is translated to the right of the screen 
+        when hamburger menu unchecked. It also displays the menu vertically 
+        on mobile and changes the color to dark pink
+    */
   }
   header .navbar .hamburger,
   header .navbar .toggle-menu {
@@ -123,6 +201,10 @@ header .navbar .menu li a:hover {
   }
   header .navbar .menu li {
     width: 100%;
+    /*
+        resizes the padding of navigation links, changes its font color
+        and turns off the hover effect on mobile
+    */
   }
   header .navbar .menu li a, header .navbar .menu li a:hover {
     padding: 30px;
@@ -135,6 +217,9 @@ header .navbar .menu li a:hover {
     box-shadow: -5px 0 20px rgba(0, 0, 0, 0.2);
   }
 }
+/*
+    The footer is at the bottom of the page has a light pink background
+*/
 footer {
   display: flex;
   align-items: center;
@@ -144,11 +229,34 @@ footer {
   background-color: #FFB5A7;
   color: black;
   transition: 0.3s;
+  /*
+      The social media logos class is a section containing both the black 
+      GitHub and LinkedIn Font-Awesome icons/logos on the page 
+  */
+  /*
+      This .line-separator is a pink vertical line that separates the icons
+      and nav links to create a nice visual divider
+  */
+  /*
+      The <nav> element contains the links to the different pages of the site. 
+  */
+  /*
+      .contact-details contains both the email and contact number in the footer
+  */
 }
 footer .social-media-logos {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  /*
+      The <a> tag encapsulates each individual GitHub and LinkedIn Font-Awesome icon
+      and turns it into a link
+  */
+}
+footer .social-media-logos a {
+  /*
+      The <i> tag is a single Font-Awesome icon
+  */
 }
 footer .social-media-logos a i {
   padding: 20px;
@@ -165,6 +273,10 @@ footer .line-separator {
 footer nav {
   font-family: "Nunito", sans-serif;
   margin-bottom: 20px;
+  /*
+      The navigation links are organized in a single unordered list.
+      On mobile it is displayed as a column.
+  */
 }
 footer nav ul {
   list-style: none;
@@ -172,6 +284,19 @@ footer nav ul {
   flex-direction: column;
   align-items: flex-end;
   margin-right: 15px;
+  /*
+      Each link is represented as a list item but we do not want it to
+      appear with bullet points thus the text-decoration:none was used.
+  */
+}
+footer nav ul li {
+  /*
+      This <a> tag turns the list item into a link
+  */
+  /*
+      This a:visited selector changes the default 
+      color of the visited link from purple to black
+  */
 }
 footer nav ul li a {
   justify-self: flex-end;
@@ -190,6 +315,9 @@ footer .contact-details {
   justify-content: space-around;
   width: 100%;
   flex-direction: row;
+  /*
+      .contact-detail-items is the email and phone in separate containers
+  */
 }
 footer .contact-details .contact-detail-items {
   font-family: "Nunito", sans-serif;
@@ -198,6 +326,12 @@ footer .contact-details .contact-detail-items {
   flex-wrap: wrap;
   justify-content: space-around;
   padding: 0 10px;
+  /*
+      This <i> tag is to format the font-awesome icon of mail and phone
+  */
+  /*
+      .contact-details-text is the text of the email and phone number
+  */
 }
 footer .contact-details .contact-detail-items i {
   padding: 0 4px;
@@ -213,6 +347,12 @@ footer .contact-details .contact-detail-items .contact-details-text {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    /*
+        Making .line-separator longer on bigger screens
+    */
+    /*
+        Displays navigation bar as row
+    */
   }
   footer .social-media-logos a i {
     margin: 0 3vw;
@@ -239,6 +379,9 @@ footer .contact-details .contact-detail-items .contact-details-text {
     transition: 0.3s;
     font-size: 18px;
     padding: 20px 20px;
+    /*
+         adding bottom shadow and moving element up on nav-link hover
+    */
   }
   footer nav ul li a:hover {
     box-shadow: 0 -5px white inset;
@@ -255,22 +398,37 @@ footer .contact-details .contact-detail-items .contact-details-text {
     font-size: 20px;
   }
 }
+/*
+    By default components have padding and margin
+    The below sets everything to 0
+    border-box makes sure that padding and border are included in the width total
+*/
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/*
+    Initializing variables to be used in this page
+*/
 :root {
   --img-width: 300px;
   --img-height: 200px;
   --post-height: calc(var(--img-height) * 2.2);
 }
 
+body {
+  /*
+      Initialize default font of sans serif Nunito on the main component
+  */
+}
 body main {
   padding-top: 100px;
-  margin: auto;
   font-family: "Nunito", sans-serif;
+  /*
+      The translucent pink container for the cards
+  */
 }
 body main .row {
   background-color: rgba(255, 182, 167, 0.0823529412);
@@ -278,12 +436,21 @@ body main .row {
   border-radius: 4px;
   width: 90%;
   margin: 2em 5vw;
+  /*
+      The container for the page heading
+  */
+  /*
+      container for all cards excluding the page header
+  */
 }
 body main .row .heading {
   width: 60%;
   display: block;
   margin: auto;
   text-align: center;
+  /*
+      Turns page heading into cursive Pacifico font
+  */
 }
 body main .row .heading h1 {
   font-family: "Pacifico", cursive;
@@ -297,6 +464,16 @@ body main .row .article-container {
   justify-content: center;
   flex-wrap: wrap;
   margin-bottom: 60px;
+  /*
+      .post-container contains the image, heading and text
+      These elements have a flex display
+  */
+}
+body main .row .article-container .post-container {
+  /*
+      Initialize each card to have the same width as image width but longer 
+      height than the image height as calculated in :root
+  */
 }
 body main .row .article-container .post-container .post {
   width: var(--img-width);
@@ -306,6 +483,11 @@ body main .row .article-container .post-container .post {
   box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.1);
   border-radius: 4px;
   overflow: hidden;
+  /*
+      Image size variables are defined int the :root. 
+      object-fit: cover reduces size of image to specified 
+      widths and heights without losing its ratio, preventing stretch
+  */
 }
 body main .row .article-container .post-container .post img {
   width: var(--img-width);
@@ -320,6 +502,9 @@ body main .row .article-container .post-container .post h4 {
 body main .row .article-container .post-container .post h4 a {
   text-decoration: none;
   color: black;
+  /*
+      Changes color of card heading to pink and adds underline on hover and on click
+  */
 }
 body main .row .article-container .post-container .post h4 a:hover {
   text-decoration: underline;
@@ -333,6 +518,11 @@ body main .row .article-container .post-container .post p {
 @media screen and (min-width: 768px) {
   body main {
     padding-top: 50px;
+  }
+  body main .row {
+    /*
+        empty-child ensures that previous flex item is aligned to the left, not center 
+    */
   }
   body main .row .empty-child {
     display: block;

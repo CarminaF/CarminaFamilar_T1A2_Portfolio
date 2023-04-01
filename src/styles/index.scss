@@ -1,4 +1,7 @@
-// Imports non-main components and global variables
+/*
+    Imports non-main components and global variables
+    This file is then imported into each respective pages' css files
+*/
 @import "./defaults/color";
 @import "./defaults/fonts";
 @import "./defaults/breakpoints";

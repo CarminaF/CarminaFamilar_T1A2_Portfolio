@@ -5,17 +5,31 @@
     justify-content: space-around;
 }
 
+/*
+    The footer is at the bottom of the page has a light pink background
+*/
 footer {
     @include flex-wrap-center-space-around();
     padding: 15px;
     background-color: $light-pink;
     color: black;
     transition: 0.3s;
+    /*
+        The social media logos class is a section containing both the black 
+        GitHub and LinkedIn Font-Awesome icons/logos on the page 
+    */
     .social-media-logos {
         display: flex;
         flex-direction: row;
         justify-content:  space-between;
+        /*
+            The <a> tag encapsulates each individual GitHub and LinkedIn Font-Awesome icon
+            and turns it into a link
+        */
         a {
+            /*
+                The <i> tag is a single Font-Awesome icon
+            */
             i {
                 padding: 20px;
                 color: black; 
@@ -24,22 +38,40 @@ footer {
             }
         }
     }
+    /*
+        This .line-separator is a pink vertical line that separates the icons
+        and nav links to create a nice visual divider
+    */
     .line-separator {
         width: 3px;
         height: 100px;
         background-color: $dark-pink;
         margin-bottom: 20px;
     }
+    /*
+        The <nav> element contains the links to the different pages of the site. 
+    */
     nav {
         font-family: $plain-font;
         margin-bottom: 20px;
+        /*
+            The navigation links are organized in a single unordered list.
+            On mobile it is displayed as a column.
+        */
         ul {
             list-style: none;
             display: flex;
             flex-direction: column;
             align-items: flex-end;
             margin-right: 15px;
+            /*
+                Each link is represented as a list item but we do not want it to
+                appear with bullet points thus the text-decoration:none was used.
+            */
             li {
+                /*
+                    This <a> tag turns the list item into a link
+                */
                 a {
                     justify-self: flex-end;
                     text-decoration: none;
@@ -47,23 +79,39 @@ footer {
                     line-height: 1.2;
                     font-size: 16px;;
                 }
+                /*
+                    This a:visited selector changes the default 
+                    color of the visited link from purple to black
+                */
                 a:visited {
                     color: black;
                 }
             }
         }
     }
+    /*
+        .contact-details contains both the email and contact number in the footer
+    */
     .contact-details {
         @include flex-wrap-center-space-around();
         width: 100%;
         flex-direction: row;
+        /*
+            .contact-detail-items is the email and phone in separate containers
+        */
         .contact-detail-items {
             font-family: $plain-font;
             @include flex-wrap-center-space-around();
             padding: 0 10px;
+            /*
+                This <i> tag is to format the font-awesome icon of mail and phone
+            */
             i {
                 padding: 0 4px;
             }
+            /*
+                .contact-details-text is the text of the email and phone number
+            */
             .contact-details-text {
                 font-size: 13px;
                 color: black;
@@ -93,10 +141,16 @@ footer {
             }
 
         }
+        /*
+            Making .line-separator longer on bigger screens
+        */
         .line-separator {
             height: 80px;
             margin: 0;
         }
+        /*
+            Displays navigation bar as row
+        */
         nav {
             ul {
                 display: flex;
@@ -110,7 +164,9 @@ footer {
                         transition: 0.3s;
                         font-size: 18px;
                         padding: 20px 20px;
-                        // adding bottom shadow and moving element up on nav-link hover
+                        /*
+                             adding bottom shadow and moving element up on nav-link hover
+                        */
                         &:hover {
                             box-shadow: 0 -5px white inset;
                             padding: 15px 20px 25px 20px;

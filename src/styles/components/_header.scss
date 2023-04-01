@@ -1,4 +1,6 @@
-
+/*
+    Utilizing hamburger-lines mix-in to make three lines for the mobile menu
+*/
 @mixin hamburger-lines {
     background: white;
     height: 4px;
@@ -7,6 +9,10 @@
     transition: 0.3s;
 }
 
+/*
+    The header displays horizontally on the top of the page
+    It has a light pink background. This is currently for the desktop version
+*/
 header {
     width: 100%;
     display: flex;
@@ -15,7 +21,14 @@ header {
     padding: 0 25px;
     background-color: $light-pink;
     transition: 0.3s;
+    /*
+        The .logo is a cursive text of the developer's name
+    */
     .logo {
+        /*
+            This <a> element turns the cursive logo text into a link that 
+            redirects users back to the home page
+        */
         a {
             font-family: $decorative-font;
             font-size: 22px;
@@ -23,12 +36,18 @@ header {
             text-decoration: none;
         }
     }
+    /*
+        .hamburger is the middle of the three white lines for the menu
+    */
     .hamburger {
         position: relative;
         cursor: pointer;
         z-index: 7;
         @include hamburger-lines();
-
+        /*
+            The &:before, &:after creates two white lines with identical styling to
+            the middle white line of the hamburger menu
+        */
         &:before, &:after {
             content: "";
             position: absolute;
@@ -37,31 +56,58 @@ header {
             background: white;
             @include hamburger-lines();
         }
+        /*
+            The &:before positions one of the white lines above the middle line
+        */
         &:before {
             top: -10px;
         }
+        /*
+            The &:after positions one of the white lines below the middle line
+        */
         &::after {
             top: 10px;
         }
     }
+    /*
+        The hamburger and toggle-menu (which is the checkbox) are not displayed on desktop
+    */
     .hamburger, .toggle-menu {
         display: none;
     }
+    /*
+        The navbar that appears on the desktop version. The links are visible and is not currently collapsed
+    */
     .navbar {
         display: flex;
         justify-content: space-between;
         align-items: center;
+        /*
+            This input is currently not displayed as this is only displayed when on mobile.
+            When on mobile and the input (.toggle-menu) is checked, the top and bottom
+            hamburger lines rotate to form an 'x' and the middle line disappears.
+        */
         input:checked ~ .hamburger {
             background: transparent;
         }
+        /*
+            the top hamburger line rotates 45deg clockwise when checked
+        */
         input:checked ~ .hamburger::before {
             top: 0;
             transform: rotate(45deg);
         }
+        /*
+            the bottom hamburger line rotates 45deg anti-clockwise when checked
+        */
         input:checked ~ .hamburger::after {
             top: 0;
             transform: rotate(-45deg);
         }
+        /*
+            This is the input menu currently not displayed. 
+            We are just initializing the properties here
+        */
         .toggle-menu {
             position: absolute;
             width: 30px;
@@ -70,6 +116,12 @@ header {
             cursor: pointer;
             opacity: 0;
         }
+        /*
+            The .menu class is an unordered list containing all the nav links
+            On desktop it is displayed horizontally
+            The z-index ensures the menu is overlapping the page
+            The transition property dictates the duration of the hover pseudo class in the nav links
+        */
         .menu {
             display: flex;
             justify-content: space-between;
@@ -77,8 +129,14 @@ header {
             align-items: center;
             z-index: 5;
             transition: 0.5s;
+            /*
+                Each link is a list item in an unordered list
+            */
             li {
                 list-style: none;
+                /*
+                    The <a> tag turn the list into a link
+                */
                 a {
                     font-family: $plain-font;
                     color: black;
@@ -88,6 +146,9 @@ header {
                     font-size: 18px;
                     line-height: 1;
                     transition: 0.3s;
+                    /*
+                        On desktop 
+                    */
                     &:hover {
                         border-top-left-radius: 5px;
                         border-top-right-radius: 5px;
@@ -107,7 +168,9 @@ header {
     header {
         padding: 10px 20px;
         position: fixed;
-
+        /*
+            The below turns on the visibility of the hamburger menu and toggle menu
+        */
         .navbar{
             .hamburger,
             .toggle-menu {
@@ -115,7 +178,11 @@ header {
             position: fixed;
             right: 15px;
             }
-            //translate origin to the right of the screen when hamburger menu unchecked
+            /*
+                The menu's origin is translated to the right of the screen 
+                when hamburger menu unchecked. It also displays the menu vertically 
+                on mobile and changes the color to dark pink
+            */
             .menu {
                 justify-content: start;
                 flex-direction: column;
@@ -129,6 +196,10 @@ header {
                 padding-top: 60px;           
                 li {
                     width: 100%;
+                    /*
+                        resizes the padding of navigation links, changes its font color
+                        and turns off the hover effect on mobile
+                    */
                     a, a:hover {
                         padding: 30px;
                         font-size: 22px;
