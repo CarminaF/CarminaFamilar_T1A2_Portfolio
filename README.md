@@ -6,6 +6,7 @@ https://carminafamilar.netlify.app/
 GitHub repository:  
 https://github.com/CarminaF/CarminaFamilar_T1A2_Portfolio
 
+Walkthrough video link was in the README submitted to CoderAcademy.
 
 <br>
 
