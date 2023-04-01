@@ -319,9 +319,6 @@ body main .figure-and-article:nth-child(2) article p {
 }
 
 @media screen and (min-width: 768px) {
-  body main {
-    padding-top: 0;
-  }
   body main .figure-and-article {
     flex-direction: row;
   }
@@ -339,6 +336,9 @@ body main .figure-and-article:nth-child(2) article p {
   }
 }
 @media screen and (min-width: 1025px) {
+  body main {
+    padding-top: 0;
+  }
   body main .figure-and-article article h2 {
     font-size: 2em;
   }

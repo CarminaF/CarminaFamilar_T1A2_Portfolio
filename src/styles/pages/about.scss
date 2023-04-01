@@ -70,7 +70,6 @@ body {
 @media screen and (min-width: $small) {
     body {
         main {
-            padding-top: 0;
             .figure-and-article {
                 flex-direction: row;
                 .img-section {  
@@ -94,6 +93,7 @@ body {
 @media screen and (min-width: $medium) {
     body {
         main {
+            padding-top: 0;
             .figure-and-article {
                 article {
                     h2 {
