@@ -266,7 +266,7 @@ body main {
   flex-direction: column;
   flex-wrap: wrap;
   font-family: "Nunito", sans-serif;
-  padding-top: 50px;
+  padding-top: 55px;
   background-color: rgba(255, 182, 167, 0.0823529412);
 }
 body main .figure-and-article {
@@ -319,26 +319,26 @@ body main .figure-and-article:nth-child(2) article p {
 }
 
 @media screen and (min-width: 768px) {
+  body main {
+    padding-top: 0;
+  }
   body main .figure-and-article {
     flex-direction: row;
   }
   body main .figure-and-article .img-section {
     width: 46vw;
-    height: 34vw;
+    height: 40vw;
     background-color: #F17178;
   }
   body main .figure-and-article article {
     width: 46vw;
-    height: 34vw;
+    height: 40vw;
   }
   body main .figure-and-article:nth-child(2) {
     flex-direction: row-reverse;
   }
 }
 @media screen and (min-width: 1025px) {
-  body main {
-    padding-top: 0;
-  }
   body main .figure-and-article article h2 {
     font-size: 2em;
   }

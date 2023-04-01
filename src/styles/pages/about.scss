@@ -13,13 +13,13 @@
 
 @mixin tablet-laptop-width-height {
     width: 46vw;
-    height: 34vw;
+    height: 40vw;
 }
 body {
     main {
         @include flex-col-wrap();
         font-family: $plain-font;
-        padding-top: 50px;
+        padding-top: 55px;
         background-color: $translucent-pink;
         .figure-and-article {
             @include flex-col-wrap();
@@ -70,6 +70,7 @@ body {
 @media screen and (min-width: $small) {
     body {
         main {
+            padding-top: 0;
             .figure-and-article {
                 flex-direction: row;
                 .img-section {  
@@ -93,7 +94,6 @@ body {
 @media screen and (min-width: $medium) {
     body {
         main {
-            padding-top: 0;
             .figure-and-article {
                 article {
                     h2 {
