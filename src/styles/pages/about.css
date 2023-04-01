@@ -276,7 +276,7 @@ body main .figure-and-article {
 }
 body main .figure-and-article .img-section {
   width: 100vw;
-  height: 70vw;
+  height: 75vw;
   overflow: hidden;
 }
 body main .figure-and-article .img-section img {
@@ -287,13 +287,13 @@ body main .figure-and-article .img-section img {
 }
 body main .figure-and-article article {
   width: 100vw;
-  height: 70vw;
+  height: 75vw;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
   flex-wrap: nowrap;
   justify-content: center;
-  padding: 30px;
+  padding: 20px;
 }
 body main .figure-and-article article h2 {
   font-weight: lighter;
@@ -301,7 +301,7 @@ body main .figure-and-article article h2 {
   color: black;
 }
 body main .figure-and-article article p {
-  padding-left: 30px;
+  padding-left: 25px;
 }
 body main .figure-and-article:nth-child(2) {
   background-color: #F17178;
@@ -315,7 +315,7 @@ body main .figure-and-article:nth-child(2) article h2 {
 }
 body main .figure-and-article:nth-child(2) article p {
   padding-left: 0;
-  padding-right: 30px;
+  padding-right: 25px;
 }
 
 @media screen and (min-width: 768px) {
